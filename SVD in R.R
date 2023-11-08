@@ -4,7 +4,9 @@ image <- load.image("waterfall.jpg")
 image <- grayscale(image)
 plot(image, main = "Original Image", axes=FALSE)
 
+
 SVDValues <- svd(scale(image))
+length(SVDValues$v)
 #SVDValues has values for U, D, and V. Since we're showing the original Matrix
 #as M = UDVt, thus using the number of singular values and multiplying them across
 #should accurately estimate this image according to the required rank
